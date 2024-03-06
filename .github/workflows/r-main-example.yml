@@ -1,0 +1,12 @@
+on: [push]
+name: Run R Main
+
+jobs:
+  run-some-R-code:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: r-lib/actions/setup-r@v2
+
+      - run: Rscript main.r
